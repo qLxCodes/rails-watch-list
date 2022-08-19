@@ -1,5 +1,6 @@
 <div class="container mt-5">
-
+<%= link_to "back to Lists", lists_path %>
+<%= link_to "add new movie", new_list_bookmark_path(@list) %>
   <h2 class="mb-5"><%= @list.name %></h2>
 
   <div class="cards">
