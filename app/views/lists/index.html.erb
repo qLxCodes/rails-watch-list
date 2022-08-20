@@ -1,13 +1,12 @@
 <div class="container mt-5">
-  <h1>Lists#index</h1>
-  <p>Overview of all your Lists</p>
+  <h1>Overview of all your Lists</h1>
   <%= link_to "Create a new list", new_list_path, class: "btn btn-primary" %>
 
   <div class="cards mt-5">
     <% @lists.each do |list| %>
       <div class="card-category" style="background-color: #8BC6EC; background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);">
         <%= link_to list.name, list_path(list) %>
-    <% end %>
       </div>
+    <% end %>
   </div>
 </div>
