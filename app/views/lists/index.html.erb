@@ -1,9 +1,13 @@
-<h1>Lists#index</h1>
-<p>Find me in app/views/lists/index.html.erb</p>
+<div class="container mt-5">
+  <h1>Lists#index</h1>
+  <p>Overview of all your Lists</p>
+  <%= link_to "Create a new list", new_list_path, class: "btn btn-primary" %>
 
-
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %></li>
-  <% end %>
-</ul>
+  <div class="cards mt-5">
+    <% @lists.each do |list| %>
+      <div class="card-category" style="background-color: #8BC6EC; background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);">
+        <%= link_to list.name, list_path(list) %>
+    <% end %>
+      </div>
+  </div>
+</div>
